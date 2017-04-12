@@ -1,0 +1,308 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 264886 */
+  src: url('//at.alicdn.com/t/font_8fxz32utub359udi.eot');
+  src: url('//at.alicdn.com/t/font_8fxz32utub359udi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_8fxz32utub359udi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_8fxz32utub359udi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_8fxz32utub359udi.svg#iconfont') format('svg');
+}
+@font-face {
+  font-family: 'iconfont2';  /* project id 264886 */
+  src: url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.eot');
+  src: url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.svg#iconfont') format('svg');
+}
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+body,
+html{
+  margin: 0;
+  padding: 0;
+}
+#welcome {
+  margin: 0 auto;
+  background: url(http://hearthstone.nos.netease.com/1/wallpages/201506/juneno-1366x768.jpg) no-repeat;
+  max-width: 1366px;
+  height: 768px;
+}
+#welcome .contain {
+  color: #f2ef9a;
+  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  padding: 250px 0 0 0;
+}
+#welcome h2 {
+  font-size: 50px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0 0 40px 0;;
+  padding: 0;
+}
+#welcome h1 {
+  font-size: 90px;
+  font-weight: bold;
+  margin: 0;
+}
+#contact buttom,
+#welcome buttom {
+  display: inline-block;
+  margin: 50px 0 0 0;
+  padding: 20px 30px;
+  color: #fff;
+  background: rgb(225,206,68);
+  border-radius: 6px;
+}
+#welcome buttom:hover {
+  background: rgb(225,225,68);
+  cursor: pointer;
+}
+#occupation,
+#equipment {
+  height: 768px;
+  text-align: center;
+  background: #fdfcd4;
+}
+#contact h2,
+#time-axis h2,
+#occupation h2,
+#equipment h2 {
+  margin: 0;
+  padding: 145px 0 0 0;
+  font-size: 50px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #333;
+  text-transform: uppercase;
+}
+#contact>p,
+#time-axis>p,
+#occupation>p,
+#equipment>p {
+  margin: 30px 0 0 0;
+  color: #ccc;
+  font-size: 20px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: italic;
+}
+#equipment .wrap {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+#equipment .equip {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+#equipment .font {
+  font-family: 'iconfont';
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  font-size: 70px;
+  color: #fff;
+  background: rgb(254,209,54);
+  border-radius: 50%;
+  line-height: 2;
+}
+#equipment h3 {
+  font-size: 30px;
+  color: #333;
+  margin-top: -5px;
+}
+#occupation {
+  background: rgb(234,212,174);
+  height: auto;
+}
+#occupation>p {
+  color: #888;
+  margin-bottom: 50px;
+}
+#occupation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 100px;
+}
+#occupation li {
+  float: left;
+  width: 30%;
+  text-align: center;
+  
+}
+
+#occupation li h4 {
+  font-size: 35px;
+  position: relative;
+  top: -20px;
+  color: #333;
+}
+#occupation li p {
+  font-size: 20px;
+  font-style: italic;
+  position: relative;
+  top: -50px;
+  color: #888;
+}
+#time-axis {
+  text-align: center;
+  background-color: #cefafc;
+}
+#time-axis ul {
+  list-style: none;
+  padding: 0 0 1px 0;
+  margin: 100px 0 0 0;
+}
+#time-axis li {
+  position: relative;
+  padding-bottom: 100px;
+}
+#time-axis li>img {
+  width: 280px;
+  height: 280px;
+  border: 4px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+#time-axis li:nth-child(2n+1) .summery {
+  position: absolute;
+  width: 35%;
+  left: 30px;
+  top: 0;
+  text-align: right;
+}
+#time-axis li:nth-child(2n) .summery {
+  position: absolute;
+  width: 35%;
+  right: 30px;
+  top: 0;
+  text-align: left;
+}
+#time-axis .summery p {
+  color: #888;
+}
+#time-axis li:after {
+  content: '';
+  height: 100%;
+  border-left: 3px solid #ccc;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.5px;
+  top: 0;
+  z-index: 1;
+}
+#time-axis li:last-child {
+  width: 280px;
+  height: 280px;
+  border: 4px solid #ccc;
+  border-radius: 50%;
+  background: rgb(254,209,52);
+  padding: 0;
+  margin: 0 auto 100px auto;
+}
+#time-axis li:last-child h3 {
+  font-size: 40px;
+  color: #fff;
+  padding-top: 45px;
+  text-transform: uppercase;
+}
+#time-axis li:last-child:after {
+  content: none;
+}
+#contact {
+  text-align: center;
+  height: 670px;
+  background: url(http://hearthstone.nos.netease.com/3/v2015/layout/main-bg-top.jpg) no-repeat;
+}
+#contact h2 {
+  color: #fff;
+  padding: 120px 0 0 0;
+}
+#contact>p {
+  color: #ccc;
+  margin-bottom: 50px;
+}
+#contact .text,
+#contact .textarea {
+  float: left;
+  width: 50%;
+}
+#contact input[type=text] {
+  width: 480px;
+  height: 50px;
+  margin: 12px 0 12px 90px;
+  padding-left: 20px;
+  border-radius: 4px;
+}
+#contact textarea {
+  width: 480px;
+  height: 193px;
+  margin: 12px 60px 12px 0;
+  padding: 20px 0 0 20px;
+  border-radius: 4px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#contact buttom {
+  font-weight: bold;
+  background: rgb(254,209,52);
+}
+#contact buttom:hover {
+  background: rgb(254,197,3);
+  cursor: pointer;
+}
+#footer {
+  height: 60px;
+  text-align: center;
+  padding: 0 250px;
+}
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+#footer .copyright {
+  float: left;
+  font-size: 14px;
+  margin: 36px 0;
+  vertical-align: middle;
+}
+#footer .Privacy-Policy {
+  float: right;
+  font-size: 14px;
+  margin: 36px 0;
+}
+#footer .Privacy-Policy a {
+  color: rgb(254,209,54);
+  text-decoration: none;
+  padding-left: 5px;
+}
+#footer .font {
+  font-family: 'iconfont2';
+  font-size: 30px;
+  padding: 30px 0;
+  position: relative;
+  top: -10px;
+}
+#footer .font li {
+  padding: 0 4px;
+}
+#footer .font li:nth-child(2) {
+  font-size: 36px;
+  position: relative;
+  top: 2px;
+}
+#footer .font li:nth-child(3) {
+  font-size: 32px;
+  position: relative;
+  top: -1px;
+  left: -3px;
+}
