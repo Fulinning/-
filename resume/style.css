@@ -157,6 +157,9 @@ body {
   left: -45px;
   top: 3px;
 }
+.about li:before {
+  top: 0;
+}
 .sociation {
   width: 50%;
   display: inline-block;
@@ -166,5 +169,6 @@ body {
 .about {
   display: inline-block;
   float: left;
-  margin: 0 0 0 50px;
+  width: 40%;
+  margin: 0 0 0 80px;
 }

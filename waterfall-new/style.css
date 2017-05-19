@@ -1,0 +1,40 @@
+    .layout {
+      max-width: 1260px;
+      margin: 0 auto;
+    }
+    .news-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+    }
+    .news-list li {
+      width: 260px;
+      padding: 8px;
+      border: 1px solid #aaa;
+      position: absolute;
+      opacity: 0;
+      margin: 10px;
+      transition: all 1s;
+    }
+    .news-list a {
+      text-decoration: none;
+    }
+    .news-list img {
+      width: 260px;
+    }
+    .news-list h3 {
+      color: #333;
+      font-size: 16px;
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid #666;
+    }
+    .news-list p {
+      margin: 0 0 10px 0;
+      color: #999;
+      font-size: 14px;
+    }
+    .hidden {
+      opacity: 0;
+      position: absolute;
+    }
