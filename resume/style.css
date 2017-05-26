@@ -67,7 +67,7 @@ body {
   float: left;
 }
 .contact h3 {
-  margin: 10px 0 5px; 0;
+  margin: 10px 0 5px 0;
   border-bottom: 5px solid #000;
   padding-bottom: 8px;
   font-size: 20px;
@@ -142,7 +142,6 @@ body {
 .about li {
   position: relative;
 }
-.sociation li:before,
 .about li:before {
   content: '+';
   display: inline-block;
@@ -160,15 +159,8 @@ body {
 .about li:before {
   top: 0;
 }
-.sociation {
-  width: 50%;
-  display: inline-block;
-  float: left;
-  margin: 0;
-}
 .about {
   display: inline-block;
   float: left;
-  width: 40%;
-  margin: 0 0 0 80px;
+  width: 100%;
 }

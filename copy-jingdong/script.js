@@ -1,104 +1,125 @@
-!function(){
-  var $imgList = $('#important .carousel .img-list'),
-      $firstImg = $imgList.children().first(),
-      $lastImg = $imgList.children().last(),
-      imgIndex = 0,
-      isAnimate = false,
-      clicked = false,
-      imgNumber = $imgList.children().length;
-  $imgList.find('img').not('.show').each(function(){
+function Carousel1($ct){
+  this.$ct = $ct;
+  this.init();
+  this.bind();
+}
+Carousel1.prototype.init = function(){
+  this.$imgList = this.$ct.children().first(),
+  this.$firstImg = this.$imgList.children().first(),
+  this.$lastImg = this.$imgList.children().last(),
+  this.imgIndex = 0,
+  this.isAnimate = false,
+  this.clicked = false,
+  this.imgNumber = this.$imgList.children().length;
+  this.$imgList.children().not('.show').each(function(){
     $(this).css('z-index',-1)
     $(this).fadeOut();
   })
-  $('#important .carousel .btn-pre').on('click',function(){
-    clicked = true;
-    preImg(1);
+}
+Carousel1.prototype.bind = function(){
+  var _this = this;
+  this.$ct.find($('.btn-pre')).on('click',function(){
+    _this.clicked = true;
+    _this.preImg(1);
     setTimeout(function(){
-      clicked = false;
+      _this.clicked = false;
     },2000)
   })
-  $('#important .carousel .btn-next').on('click',function(){
-    clicked = true;
-    nextImg(1);
+  this.$ct.find($('.btn-next')).on('click',function(){
+    _this.clicked = true;
+    _this.nextImg(1);
     setTimeout(function(){
-      clicked = false;
+      _this.clicked = false;
     },2000)
   })
   setInterval(function(){
-    if(!clicked){
-      nextImg(1);
+    if(!_this.clicked){
+      _this.nextImg(1);
     }
-  },2000)    
-  function nextImg(n){
-    if(isAnimate){return};
-    isAnimate = true;
-    var afterShow;
-    var nowShow = $('#important .carousel img.show').parents('li').index();
-    $imgList.find('img.show').fadeOut();
-    $imgList.find('img.show').removeClass('show');
-    if(nowShow+n<imgNumber){
-      $imgList.find('img').eq(nowShow+n).addClass('show');
-      afterShow = nowShow + n;
-    }else{
-      $imgList.find('img').eq(0).addClass('show');
-      afterShow = 0;
-    }
-    $('#important .carousel img.show').css('z-index',0)
-    $('#important .carousel img.show').fadeIn(function(){
-      isAnimate = false;
-    });
-    $('#important .carousel .dotted').children().removeClass('active').eq(afterShow).addClass('active');
-  }
-  function preImg(n){
-    if(isAnimate){return};
-    isAnimate = true;
-    var afterShow;
-    var nowShow = $('#important .carousel img.show').parents('li').index();
-    $imgList.find('img.show').fadeOut();
-    $imgList.find('img.show').removeClass('show');
-    if(nowShow-n>=0){
-      $imgList.find('img').eq(nowShow-n).addClass('show');
-      afterShow = nowShow - n;        
-    }else{
-      $imgList.find('img').eq(imgNumber-1).addClass('show');
-      afterShow = imgNumber-1;
-    }
-    $('#important .carousel img.show').css('z-index',0)
-    $('#important .carousel img.show').fadeIn(function(){
-      isAnimate = false;
-    });
-    $('#important .carousel .dotted').children().removeClass('active').eq(afterShow).addClass('active');
-  }   
-  $('#important .carousel .dotted>li').on('click',function(){
-    var n = $(this).index()-$('.active').index();
+  },2000)
+  this.$ct.find($('.dotted>li')).on('click',function(){
+    var n = $(_this).index()-$('.active').index();
     if(n>0){
-      nextImg(n);
+      _this.nextImg(n);
     }else if(n<0){
-      preImg(-n);
+      _this.preImg(-n);
     }
   })
-  $('#important .carousel').on('mouseenter',function(){
-    $('#important .carousel .btn').css('opacity',0.5)
+  this.$ct.on('mouseenter',function(){
+    _this.$ct.find($('.btn')).css('opacity',0.5)
   }) 
-  $('#important .carousel').on('mouseleave',function(){
-    $('#important .carousel .btn').css('opacity',0)
+  this.$ct.on('mouseleave',function(){
+    _this.$ct.find($('.btn')).css('opacity',0)
   }) 
-}()
-!function(){
-  $('#important .extra-main-cd .tab-head').on('mouseenter','li',function(e){
-    $('#important .extra-main-cd .tab-head li').each(function(){
+}
+Carousel1.prototype.nextImg = function(n){
+  var _this = this;  
+  if(this.isAnimate){return};
+  this.isAnimate = true;
+  var afterShow;
+  var nowShow = this.$ct.find($('.show')).index();
+  this.$imgList.find('.show').fadeOut();
+  this.$imgList.find('.show').removeClass('show');
+  if(nowShow+n<this.imgNumber){
+    this.$imgList.children().eq(nowShow+n).addClass('show');
+    afterShow = nowShow + n;
+  }else{
+    this.$imgList.children().eq(0).addClass('show');
+    afterShow = 0;
+  }
+  this.$ct.find($('li.show')).css('z-index',0)
+  this.$ct.find($('li.show')).fadeIn(function(){
+    _this.isAnimate = false;
+  });
+  this.$ct.find($('.dotted')).children().removeClass('active').eq(afterShow).addClass('active');
+}
+Carousel1.prototype.preImg = function(n){
+  var _this = this;  
+  if(this.isAnimate){return};
+  this.isAnimate = true;
+  var afterShow;
+  var nowShow = this.$ct.find($('li.show')).index();
+  this.$imgList.find('li.show').fadeOut();
+  this.$imgList.find('li.show').removeClass('show');
+  if(nowShow-n>=0){
+    this.$imgList.children().eq(nowShow-n).addClass('show');
+    afterShow = nowShow - n;        
+  }else{
+    this.$imgList.children().eq(this.imgNumber-1).addClass('show');
+    afterShow = this.imgNumber-1;
+  }
+  console.log(this.$ct.find($('li.show')));
+  this.$ct.find($('li.show')).css('z-index',0)
+  this.$ct.find($('li.show')).fadeIn(function(){
+    _this.isAnimate = false;
+  });
+  this.$ct.find($('.dotted')).children().removeClass('active').eq(afterShow).addClass('active');
+}
+function Tab($ct){
+  this.$ct = $ct;
+  this.bind();
+}
+Tab.prototype.bind = function(){
+  var _this = this;
+  this.$ct.find($('.tab-head')).on('mouseenter','li',function(e){
+    _this.$ct.find($('.tab-head>li')).each(function(){
       $(this).removeClass('active');
     })
     $(e.target).addClass('active');
-    var index = $('#important .extra-main-cd .tab-head .active').index();
-    $('#important .extra-main-cd .tab-content li').each(function(){
+    var index = _this.$ct.find($('.tab-head .active')).index();
+    _this.$ct.find($('.tab-content>li')).each(function(){
       $(this).removeClass('active');
     })
-    $('#important .extra-main-cd .tab-content li').eq(index).addClass('active');
+    _this.$ct.find($('.tab-content>li')).eq(index).addClass('active');
   })
-}()
-!function(){
+}
 
+new Tab($('#important .extra-main-cd'))
+new Tab($('#reduce-price .reduce-price-middle-line3-tab'))
+new Carousel1($('#important .carousel'))
+new Carousel1($('.reduce-price-middle-line2-carousel'))
+
+!function(){
   var $List = $('#reduce-price .reduce-price-top-things .carousel-list'),
       $firstList = $List.children().first(),
       $lastList = $List.children().last(),
@@ -146,104 +167,4 @@
   $('#reduce-price .carousel').on('mouseleave',function(){
     $('#reduce-price .reduce-price-top-things .btn').css('opacity',0)
   }) 
-}()
-!function(){
-
-  var $imgList = $('#reduce-price .reduce-price-middle-line2-carousel .carousel-list'),
-      $firstImg = $imgList.children().first(),
-      $lastImg = $imgList.children().last(),
-      imgIndex = 0,
-      isAnimate = false,
-      clicked = false,
-      imgNumber = $imgList.children().length;
-  $imgList.children('li').not('.show').each(function(){
-    $(this).css('z-index',-1)
-    $(this).fadeOut();
-  })
-  $('#reduce-price .reduce-price-middle-line2-carousel .btn-pre').on('click',function(){
-    clicked = true;
-    preImg(1);
-    setTimeout(function(){
-      clicked = false;
-    },2000)
-  })
-  $('#reduce-price .reduce-price-middle-line2-carousel .btn-next').on('click',function(){
-    clicked = true;
-    nextImg(1);
-    setTimeout(function(){
-      clicked = false;
-    },2000)
-  })
-  setInterval(function(){
-    if(!clicked){
-      nextImg(1);
-    }
-  },3000)   
-  function nextImg(n){
-    if(isAnimate){return};
-    isAnimate = true;
-    var afterShow;
-    var nowShow = $('#reduce-price .reduce-price-middle-line2-carousel li.show').index();
-    $imgList.find('li.show').fadeOut();
-    $imgList.find('li.show').removeClass('show');
-    if(nowShow+n<imgNumber){
-      $imgList.children('li').eq(nowShow+n).addClass('show');
-      afterShow = nowShow + n;
-    }else{
-      $imgList.children('li').eq(0).addClass('show');
-      afterShow = 0;
-    }
-    $('#reduce-price .reduce-price-middle-line2-carousel li.show').css('z-index',0)
-    $('#reduce-price .reduce-price-middle-line2-carousel li.show').fadeIn(function(){
-      isAnimate = false;
-    });
-    $('#reduce-price .reduce-price-middle-line2-carousel .dotted').children().removeClass('active').eq(afterShow).addClass('active');
-  }
-  function preImg(n){
-    if(isAnimate){return};
-    isAnimate = true;
-    var afterShow;
-    var nowShow = $('#reduce-price .reduce-price-middle-line2-carousel li.show').index();
-    $imgList.find('li.show').fadeOut();
-    $imgList.find('li.show').removeClass('show');
-    if(nowShow-n>=0){
-      $imgList.children('li').eq(nowShow-n).addClass('show');
-      afterShow = nowShow - n;        
-    }else{
-      $imgList.children('li').eq(imgNumber-1).addClass('show');
-      afterShow = imgNumber-1;
-    }
-    $('#reduce-price .reduce-price-middle-line2-carousel li.show').css('z-index',0)
-    $('#reduce-price .reduce-price-middle-line2-carousel li.show').fadeIn(function(){
-      isAnimate = false;
-    });
-    $('#reduce-price .reduce-price-middle-line2-carousel .dotted').children().removeClass('active').eq(afterShow).addClass('active');
-  }   
-  $('#reduce-price .reduce-price-middle-line2-carousel .dotted>li').on('click',function(){
-    var n = $(this).index()-$('.active').index();
-    if(n>0){
-      nextImg(n);
-    }else if(n<0){
-      preImg(-n);
-    }
-  })
-  $('#reduce-price .reduce-price-middle-line2-carousel').on('mouseenter',function(){
-    $('#reduce-price .reduce-price-middle-line2-carousel .btn').css('opacity',0.5)
-  }) 
-  $('#reduce-price .reduce-price-middle-line2-carousel').on('mouseleave',function(){
-    $('#reduce-price .reduce-price-middle-line2-carousel .btn').css('opacity',0)
-  }) 
-}()
-!function(){
-  $('#reduce-price .reduce-price-middle-line3-tab .tab-head').on('mouseenter','li',function(e){
-    $('#reduce-price .reduce-price-middle-line3-tab .tab-head li').each(function(){
-      $(this).removeClass('active');
-    })
-    $(e.target).addClass('active');
-    var index = $('#reduce-price .reduce-price-middle-line3-tab .tab-head .active').index();
-    $('#reduce-price .reduce-price-middle-line3-tab .tab-content>li').each(function(){
-      $(this).removeClass('active');
-    })
-    $('#reduce-price .reduce-price-middle-line3-tab .tab-content>li').eq(index).addClass('active');
-  })
 }()

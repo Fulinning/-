@@ -161,6 +161,12 @@ body {
 #important .carousel .img-list img {
   width: 790px;
   height: 340px;
+  position: relative;
+  left: -10px;
+}
+#important .carousel .img-list li {
+  width: 790px;
+  height: 340px;
   position: absolute;
   top: 0;
   left: 0;
