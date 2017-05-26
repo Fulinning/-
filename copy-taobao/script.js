@@ -91,7 +91,7 @@ function nextImg(n){
   $imgList.animate({'margin-left':'-='+imgWidth*n},function(){
     imgIndex += n;
     if (imgIndex===imgNumber){
-      $imgList.css('margin-left','-360px');
+      $imgList.css('margin-left',-imgWidth);
       imgIndex = 0;
     }
     $('.carousel .dotted-list').children().removeClass('active').eq(imgIndex).addClass('active');
