@@ -1,0 +1,340 @@
+header {
+  width: 100%;
+  height: 3rem;
+  background: rgb(184, 42, 41);
+  color: #eee;
+  font-size: 1rem;
+  line-height: 3rem;
+}
+header .iconfont {
+  font-size: 1rem;
+}
+header .hall {
+  float: left;
+}
+header .menu {
+  margin: 0 .125rem 0 0;
+  float: right;
+}
+header .menu .iconfont {
+  font-size: 1.25rem;
+}
+header .xing {
+  margin: 0 0 0 5.5rem;
+  font-size: 0.9rem;
+  background: #000;
+  position: relative;
+  top: -0.125rem;
+  left: -0.125rem;  
+  border-radius: .125rem;
+}
+main {
+  width: 100%;
+}
+main .title {
+  height: 2.375rem;
+  width: 100%;
+  color: #4f4f4f;
+  font-size: 0.75rem;
+  border-bottom: 0.0625rem solid #ccc;
+}
+main .title .title-name {
+  float: left;
+  margin: 0.125rem 0 0 0.125rem;
+  width: 5.125rem;
+  height: 2rem;
+  color: #555;
+  line-height: 1.9rem;
+  border: 0.0675rem solid rgb(185, 188, 187);
+  border-radius: 0.125rem;
+  text-align: center;
+}
+main .title .title-name .iconfont {
+  color: rgb(184, 42, 41);
+  font-size: 0.75rem;
+  position: relative;
+  left: 0.0625rem;
+}
+main .title ul {
+  margin: 0 2rem;
+  float: left;
+}
+main .title li {
+  float: left;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0.5rem 0.125rem;
+  background: rgb(184, 42, 41);
+  border-radius: 50%;
+  color: #eee;
+  text-align: center;
+  line-height: 1.3rem;
+}
+main .issue {
+  float: right;
+  line-height: 2.375rem;
+  position: relative;
+  right: 0.5rem;
+  top: -0.0625rem;
+}
+main .issue .number {
+  color: rgb(184, 42, 41);
+}
+main .content {
+  background: #f1f1f1;
+}
+main .content .time {
+  height: 2.75rem;
+  padding: 0.8rem 0.3rem;
+  font-size: 0.75rem;
+  color: #4f4f4f;
+}
+main .content .time .date {
+  color: rgb(184, 42, 41);
+}
+main .content .time .date-time {
+  color: rgb(184, 42, 41);
+}
+main .content .time .iconfont {
+  color: #bcbcbc;
+  float: right;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 0.05rem solid #e0e0e0;
+  line-height: 2rem;
+  text-align: center;
+  position: relative;
+  top: -0.375rem;
+  left: -0.25rem;
+}
+main .ranking {
+  height: 2rem;
+  
+}
+main .ranking .chuma,
+main .ranking .remain {
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #4f4f4f;
+  line-height: 1.8rem;
+}
+main .ranking .iconfont {
+  color: rgb(184, 42, 41);
+}
+main .remain .iconfont {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+main .special .special-title,
+main .sum .sum-title,
+main .ball .ball-title {
+  height: 1.8rem;
+  background: rgb(230, 230, 230);
+  text-align: center;
+  line-height: 1.8rem;
+  color: #4f4f4f;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+}
+main .ball .ball-list {
+  height: 6.875rem;
+}
+main .ball .ball-list li {
+  float: left;
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.25rem 0.75rem;
+  background: rgb(184, 42, 41);
+  border-radius: 50%;    
+}
+main .ball .ball-list .number {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.3rem 0 0 0;
+}
+main .ball .ball-list .prob {
+  color: rgb(227, 203, 21);
+  font-size: 0.75rem;
+  margin: 0;
+}
+main .special .font-list,
+main .sum .font-list,
+main .ball .font-list {
+  height: 2.875rem;
+  margin: 1rem 0;
+}
+main .special .font-list li,
+main .sum .font-list li,
+main .ball .font-list li {
+  width: 25%;
+  float: left;
+  border: 0.0625rem solid rgb(227, 227, 227);
+  background: rgb(251, 251, 251);
+  text-align: center;
+  border-radius: 0.25rem;
+}
+main .special .font-list .font,
+main .sum .font-list .font,
+main .ball .font-list .font {
+  color: #4f4f4f;
+  font-size: 0.8rem;
+  margin: 0.25rem 0 0 0;
+}
+main .special .font-list .prob,
+main .sum .font-list .prob,
+main .ball .font-list .prob {
+  color: rgb(184, 42, 41);
+  font-size: 0.9rem;
+  margin: 0.15rem 0 0.35rem 0;
+}
+main .special .font-list,
+main .sum .font-list {
+  margin: 0.25rem 0 1rem 0;
+}
+main .special .special-title {
+  position: relative;
+}
+main .special .ranking {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+}
+main .special .ranking .iconfont {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+main .special .font-list li {
+  width: 20%;
+}
+main .rule {
+  height: 2.5rem;
+  border-top: 0.125rem solid rgb(225, 225, 225);
+  position: relative;
+  padding: 0.45rem 0;
+}
+main .rule button:first-child {
+  width: 4.375rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  margin: 0 0.4rem;
+  background: #fff;
+  border: 0.0625rem solid rgb(190 , 190 , 190);
+  text-align: center;
+  color: #4f4f4f;
+  border-radius: 0.25rem;  
+}
+main .rule .range {
+  position: absolute;
+  top: 0.45rem;
+  right: 0;
+}
+main .rule .range p {
+  display: inline;
+  margin: 0;
+  line-height: 1.6rem;
+}
+main .rule .range button {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 0.0625rem solid #bbb;
+  border-radius: 50%; 
+  margin: 0.125rem 0.5rem;
+  background: #fff;
+}
+main .rule .range button:first-of-type::before {
+  content: '＋';
+  line-height: 1.25rem;
+  font-size: 1.75rem;
+  color:  rgb(184, 42, 41);
+  position: absolute;
+  right: 9.05rem;
+  top: 0.125rem;
+}
+main .rule .range button:nth-of-type(2)::before {
+  content: '－';
+  width: 0.5rem;
+  line-height: 1.25rem;
+  font-size: 2.4rem;
+  color:  rgb(184, 42, 41);
+  position: absolute;
+  top: 0.0625rem;
+  right: 1.875rem;
+}
+main .rule .range input[type=range]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 0.2rem;
+  width: 5.75rem;
+  background: rgb(194, 194, 194);
+  position: relative;
+  top: -0.375rem;
+  right: 0.0625rem;
+  
+}
+main .rule .range input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  cursor: default;
+  width: 1rem;
+  height: 0.8rem;
+  border-radius: 0.3rem;
+  border: 0.1rem solid rgb(230 , 135, 80);
+  background: rgb(249, 125, 40);
+}
+main .rule .range input[type=range]::-moz-slider-thumb{
+  -moz-appearance: none;
+  cursor: default;
+  width: 1rem;
+  height: 0.8rem;
+  border-radius: 0.3rem;
+  border: 0.1rem solid rgb(230 , 135, 80);
+  background: rgb(249, 125, 40);
+}
+main .footer {
+  height: 2.75rem;
+  background: #000;
+  padding: 0.5rem 0;
+  text-align: center;
+  line-height: 1.5rem;
+}
+main .footer button {
+  font-size: 0.9rem;
+  float: left;
+  width: 3.25rem;
+  height: 1.75rem;
+  margin: 0 0.6rem;
+  border-radius: 0.25rem;
+  color: rgb(130, 35, 29);
+  border: 0.125rem solid rgb(130, 35, 29);
+  background: #000;
+}
+main .footer input[type=text] {
+  font-size: 1rem;
+  font-weight: bold;
+  float: left;
+  width: 12rem;
+  height: 1.75rem;
+  margin: 0 1rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  border: none;
+  background: rgb(76, 76, 76);
+  color: rgb(132, 132, 132);
+}
+main .footer input[type=submit] {
+  font-size: 0.9rem;
+  float: left;
+  width: 2.875rem;
+  height: 1.75rem;
+  margin: 0 0 0 0.6rem;
+  border: none;
+  border-radius: 0.25rem;
+  color: #eee;
+  background: rgb(209, 96, 26);
+}
