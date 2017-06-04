@@ -11,6 +11,7 @@ header .iconfont {
 }
 header .hall {
   float: left;
+  height: 3rem;  
 }
 header .menu {
   margin: 0 .125rem 0 0;
@@ -229,6 +230,7 @@ main .rule button:first-child {
   text-align: center;
   color: #4f4f4f;
   border-radius: 0.25rem;  
+  font-size: 0.8rem;
 }
 main .rule .range {
   position: absolute;
