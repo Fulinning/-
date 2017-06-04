@@ -127,6 +127,9 @@ main .ranking .remain {
 main .ranking .iconfont {
   color: rgb(184, 42, 41);
 }
+main .chuma .iconfont {
+  font-size: 1rem;
+}
 main .remain .iconfont {
   font-weight: bold;
   font-size: 0.8rem;
