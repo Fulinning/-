@@ -1,5 +1,5 @@
 var touchFunc = function(obj,type,func) {
-    //滑动范围在1x1内则做点击处理，s是开始，e是结束
+    //滑动范围在5*5内则做点击处理，s是开始，e是结束
     var init = {x:1,y:1,sx:0,sy:0,ex:0,ey:0};
     var sTime = 0, eTime = 0;
     type = type.toLowerCase();
@@ -52,6 +52,10 @@ var touchFunc = function(obj,type,func) {
         if(type.indexOf("end")!=-1) func();
     }, false);
 };
+var probArr = [];
+$('main .prob').each(function(index,element){
+  probArr[index] = $(element).text();  
+})
 touchFunc($('main .rule .range .add')[0],'click',function(){
   event.preventDefault();
   var $range = $('main .rule .range input[type=range]');
@@ -75,7 +79,9 @@ $('main .rule .range input[type=range]').on('input',function(){
 })
 function changeFont(){
   var value = (100-$('main .rule .range input[type=range]').val())/10;
-  var _value = parseInt(9.75*(100-value))/100;
   $('main .rule .range .number').text(value);
-  $('main .ball .ball-list .prob').text(_value)
+  $('main .prob').each(function(index){
+    var _value = parseInt(probArr[index]*(100-value))/100;
+    $(this).text(_value);  
+  })
 }
