@@ -1,6 +1,6 @@
 var touchFunc = function(obj,type,func) {
     //滑动范围在5*5内则做点击处理，s是开始，e是结束
-    var init = {x:1,y:1,sx:0,sy:0,ex:0,ey:0};
+    var init = {x:5,y:5,sx:0,sy:0,ex:0,ey:0};
     var sTime = 0, eTime = 0;
     type = type.toLowerCase();
 
