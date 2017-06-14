@@ -6,14 +6,6 @@
   url('//at.alicdn.com/t/font_8fxz32utub359udi.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_8fxz32utub359udi.svg#iconfont') format('svg');
 }
-@font-face {
-  font-family: 'iconfont2';  /* project id 264886 */
-  src: url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.eot');
-  src: url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_w60rduzpl9l1h5mi.svg#iconfont') format('svg');
-}
 .clear:after {
   content: '';
   display: block;
@@ -24,17 +16,31 @@ html{
   margin: 0;
   padding: 0;
 }
+ul,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 #welcome {
   margin: 0 auto;
-  background: url(http://hearthstone.nos.netease.com/1/wallpages/201506/juneno-1366x768.jpg) no-repeat;
   max-width: 1366px;
   height: 768px;
+}
+#welcome .carousel li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
+#welcome .carousel img {
+  width: 100%;
 }
 #welcome .contain {
   color: #f2ef9a;
   font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
   text-align: center;
   padding: 250px 0 0 0;
+  position: relative;
 }
 #welcome h2 {
   font-size: 50px;
@@ -67,6 +73,11 @@ html{
   text-align: center;
   background: #fdfcd4;
 }
+#img {
+  background: rgb(94, 69, 43);
+  text-align: center;
+}
+#img h2,
 #contact h2,
 #time-axis h2,
 #occupation h2,
@@ -78,6 +89,11 @@ html{
   color: #333;
   text-transform: uppercase;
 }
+#img h2 {
+  color: #eee;
+  padding-top: 80px;
+}
+#img>p,
 #contact>p,
 #time-axis>p,
 #occupation>p,
@@ -87,6 +103,30 @@ html{
   font-size: 20px;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-style: italic;
+}
+#img>p {
+  color: #aaa;
+}
+#img ul {
+  max-width: 1240px;
+  margin: 30px auto 0 auto;
+  position: relative;
+}
+#img img {
+  position: absolute;
+  width: 300px;
+  margin: 10px 5px 0 5px;
+  top: 0;
+  left: 0;
+}
+#img .more {
+  display: inline-block;
+  margin: 30px 0;
+  padding: 10px 30px;
+  color: #fff;
+  background: rgb(225,206,68);
+  border-radius: 6px;
+  text-decoration: none;
 }
 #equipment .wrap {
   margin-left: 8%;
