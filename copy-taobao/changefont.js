@@ -2,7 +2,7 @@
   var fontsize,width
   function changefont(){
     width = $(window).width()
-    fontsize = (width/360)*100
+    fontsize = (width/360)*16
     $('html').css('font-size',fontsize)
   }
   changefont()
@@ -10,4 +10,3 @@
   changefont()
   })
 }()
-console.log(1)
